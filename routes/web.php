@@ -20,8 +20,17 @@ Route::get('/', function () {
 // });
 
 //creating direct views
-Route::view('/new', 'new');
+// Route::view('/new', 'new');
 
+
+// Route::get('/new', function() {
+// 	return view('new', ['haha'=>'usershopping']);
+// });
+
+//calling uri parameter to the view
+Route::get('/new/{user}', function($user) {
+	return view('new', ['user'=>$user]);
+});
 
 Route::redirect('/sample', '/new');
 
@@ -30,3 +39,10 @@ Route::get('/show', 'userController@show');
 
 //calling controller function showing the view using route
 Route::get('/showView', 'userController@showView');
+
+Route::get('/block', function() {
+	return view('block.block');
+});
+
+
+
