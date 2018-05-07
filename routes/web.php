@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/new', function() {
-	return view('new');
-});
+// Route::get('/new', function() {
+// 	return view('new');
+// });
+
+//creating direct views
+Route::view('/new', 'new');
+
+
+Route::redirect('/sample', '/new');
