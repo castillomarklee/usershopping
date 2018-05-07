@@ -70,16 +70,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Form submission
+                    
                 </div>
-
-                <form action={{URL::to('/formsubmit')}} method="POST">
-                   <!--  {{csrf_field()}} -->
-                   @csrf
-                    <input type="text" name="formsubmission">
-                    <button type="submit" name="button">form submission</button>
-
-                </form>
 
             </div>
         </div>

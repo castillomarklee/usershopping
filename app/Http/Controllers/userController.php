@@ -6,6 +6,7 @@
 
 	use App\Http\Controllers\Controller;
 	use Illuminate\Http\Request;
+	use Illuminate\Http\Response;
 
 	/**
 	* 
@@ -28,7 +29,10 @@
 			return "form submission " . $formsubmission;
 		}
 
+		public function formsubmissiontoken(Request $request, Response $response) {
 
+			return print_r(response(array($request->json()->all())->header('Content-Type', 'text/plain'));
+		}
 
 	}
 

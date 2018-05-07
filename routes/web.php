@@ -28,7 +28,7 @@ Route::get('/', function () {
 // });
 
 //calling uri parameter to the view
-Route::get('/new/{user}', function($user) {
+Route::get('/new/{user}', function($user) {	
 	return view('new', ['user'=>$user]);
 });
 
@@ -49,6 +49,10 @@ Route::get('/formsubmitview', function() {
 })->middleware('usershoppingmiddleware');
 
 Route::post('/formsubmit', 'userController@formsubmissioncontroller');
+
+Route::view('/formsubmittokenview', 'formsubmissiontoken.formsubmissiontokenview');
+
+Route::post('/formsubmittoken', 'userController@formsubmissiontoken');
 
 
 

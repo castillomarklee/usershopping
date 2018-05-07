@@ -73,12 +73,10 @@
                     Form submission
                 </div>
 
-                <form action={{URL::to('/formsubmit')}} method="POST">
-                   <!--  {{csrf_field()}} -->
-                   @csrf
-                    <input type="text" name="formsubmission">
-                    <button type="submit" name="button">form submission</button>
-
+                <form action={{ URL::to('/formsubmittoken') }} method="POST">
+                    <input type="text" name="user" value="">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <button type="submit" name="button">usershopping</button>
                 </form>
 
             </div>
