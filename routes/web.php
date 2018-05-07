@@ -24,3 +24,9 @@ Route::view('/new', 'new');
 
 
 Route::redirect('/sample', '/new');
+
+//calling controller function on the route
+Route::get('/show', 'userController@show');
+
+//calling controller function showing the view using route
+Route::get('/showView', 'userController@showView');
