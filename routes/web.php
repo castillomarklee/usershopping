@@ -46,7 +46,9 @@ Route::get('/block', function() {
 
 Route::get('/formsubmitview', function() {
 	return view('formsubmissionfolder.formsubmission');
-});
+})->middleware('usershoppingmiddleware');
 
 Route::post('/formsubmit', 'userController@formsubmissioncontroller');
+
+
 
