@@ -41,8 +41,12 @@ Route::get('/show', 'userController@show');
 Route::get('/showView', 'userController@showView');
 
 Route::get('/block', function() {
-	return view('block.block');
+	return view('block.blocksample');
 });
 
+Route::get('/formsubmitview', function() {
+	return view('formsubmissionfolder.formsubmission');
+});
 
+Route::post('/formsubmit', 'userController@formsubmissioncontroller');
 
