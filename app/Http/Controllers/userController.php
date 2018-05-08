@@ -30,8 +30,8 @@
 		}
 
 		public function formsubmissiontoken(Request $request, Response $response) {
-
-			return print_r(response(array($request->json()->all())->header('Content-Type', 'text/plain'));
+			$request->session()->put('name', $request->input('user'));
+			return view('formsubmissiontoken.formsubmissiontokenviewresult', ['name' => $request->session()->get('name')]);
 		}
 
 	}
