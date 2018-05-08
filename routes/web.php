@@ -54,5 +54,8 @@ Route::view('/formsubmittokenview', 'formsubmissiontoken.formsubmissiontokenview
 
 Route::post('/formsubmittoken', 'userController@formsubmissiontoken');
 
+Route::view('/formvalidationview', 'formvalidation.formvalidationview');
+
+Route::post('/formvalidationsubmit', 'userController@formvalidationsubmitcontroller');
 
 
